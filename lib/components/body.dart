@@ -20,7 +20,12 @@ class Body extends StatelessWidget {
             height: size.height * 0.45,
           ),
           TextButton(
-              style: flatButtonStyle, onPressed: () {}, child: Text('Login'))
+              style: flatButtonStyle,
+              onPressed: () {},
+              child: Text(
+                'Login',
+                style: TextStyle(color: Colors.white),
+              ))
         ],
       ),
     );
