@@ -17,23 +17,21 @@ class RoundedButton extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       width: size.width * 0.8,
+      height: size.height * 0.06,
       margin: EdgeInsets.symmetric(vertical: 10),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(29),
-        child: TextButton(
-            style: TextButton.styleFrom(
-              backgroundColor: color,
-              padding: kPaddingSymmetric,
-              shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(2.0)),
-              ),
+      child: TextButton(
+          style: TextButton.styleFrom(
+            backgroundColor: color,
+            padding: kPaddingSymmetric,
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(29)),
             ),
-            onPressed: press,
-            child: Text(
-              text,
-              style: TextStyle(color: textColor),
-            )),
-      ),
+          ),
+          onPressed: press,
+          child: Text(
+            text,
+            style: TextStyle(color: textColor),
+          )),
     );
   }
 }

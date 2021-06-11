@@ -13,13 +13,16 @@ class Body extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            "Welcome To Kreangkrai.com",
+            "Kreangkrai.com",
+            textScaleFactor: size.height * 0.003,
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
+          SizedBox(height: size.height * 0.03),
           SvgPicture.asset(
             'assets/icons/chat.svg',
             height: size.height * 0.45,
           ),
+          SizedBox(height: size.height * 0.05),
           RoundedButton(
             text: 'Login',
             press: () {},
