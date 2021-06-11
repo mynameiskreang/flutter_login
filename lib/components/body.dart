@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login/components/background.dart';
+import 'package:flutter_login/components/rounded_button.dart';
 import 'package:flutter_login/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -19,13 +20,16 @@ class Body extends StatelessWidget {
             'assets/icons/chat.svg',
             height: size.height * 0.45,
           ),
-          TextButton(
-              style: flatButtonStyle,
-              onPressed: () {},
-              child: Text(
-                'Login',
-                style: TextStyle(color: Colors.white),
-              ))
+          RoundedButton(
+            text: 'Login',
+            press: () {},
+          ),
+          RoundedButton(
+            text: 'Sign Up',
+            color: kPrimaryLightColor,
+            textColor: Colors.black,
+            press: () {},
+          ),
         ],
       ),
     );
