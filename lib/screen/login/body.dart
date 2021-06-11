@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login/components/already_have_an_account_check.dart';
+import 'package:flutter_login/components/rounded_button.dart';
 import 'package:flutter_login/components/rounded_input_field.dart';
+import 'package:flutter_login/components/rounded_password_field.dart';
 import 'package:flutter_login/constants.dart';
 import 'package:flutter_login/screen/login/background.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -23,7 +26,7 @@ class Body extends StatelessWidget {
             textScaleFactor: size.height * 0.003,
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: size.height * 0.03),
+          SizedBox(height: size.height * 0.02),
           SvgPicture.asset(
             'assets/icons/login.svg',
             height: size.height * 0.35,
@@ -35,12 +38,10 @@ class Body extends StatelessWidget {
               size: size,
               icon: Icons.person,
               color: kPrimaryColor),
-          RoundedInputField(
-              text: "Your Password",
-              onChanges: (value) {},
-              size: size,
-              icon: Icons.lock,
-              color: kPrimaryColor),
+          RoundedPasswordField(size: size, onChanged: (value) {}),
+          RoundedButton(text: "Login", press: () {}),
+          SizedBox(height: size.height * 0.03),
+          AlreadyHaveAnAccountCheck(press: () {})
         ],
       ),
     );
