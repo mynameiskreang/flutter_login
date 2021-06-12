@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login/constants.dart';
-import 'package:flutter_login/screen/sign_up/sign_up_screen.dart';
+import 'package:flutter_login/screen/welcome_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,6 +20,6 @@ class MyApp extends StatelessWidget {
                 ElevatedButtonThemeData(style: raisedButtonStyle),
             outlinedButtonTheme:
                 OutlinedButtonThemeData(style: outlineButtonStyle)),
-        home: SignUpScreen());
+        home: WelComeScreen());
   }
 }
