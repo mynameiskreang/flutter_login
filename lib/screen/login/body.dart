@@ -5,6 +5,7 @@ import 'package:flutter_login/components/rounded_input_field.dart';
 import 'package:flutter_login/components/rounded_password_field.dart';
 import 'package:flutter_login/constants.dart';
 import 'package:flutter_login/screen/login/background.dart';
+import 'package:flutter_login/screen/sign_up/sign_up_screen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Body extends StatelessWidget {
@@ -41,7 +42,12 @@ class Body extends StatelessWidget {
           RoundedPasswordField(size: size, onChanged: (value) {}),
           RoundedButton(text: "Login", press: () {}),
           SizedBox(height: size.height * 0.03),
-          AlreadyHaveAnAccountCheck(press: () {})
+          AlreadyHaveAnAccountCheck(press: () {
+            press:
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return SignUpScreen();
+            }));
+          })
         ],
       ),
     );
