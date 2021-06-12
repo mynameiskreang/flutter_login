@@ -4,6 +4,7 @@ import 'package:flutter_login/components/or_divider.dart';
 import 'package:flutter_login/components/rounded_button.dart';
 import 'package:flutter_login/components/rounded_input_field.dart';
 import 'package:flutter_login/components/rounded_password_field.dart';
+import 'package:flutter_login/components/social_icon.dart';
 import 'package:flutter_login/constants.dart';
 import 'package:flutter_login/screen/login/login_screen.dart';
 import 'package:flutter_login/screen/sign_up/background.dart';
@@ -46,6 +47,23 @@ class Body extends StatelessWidget {
                 }),
             SizedBox(height: size.height * 0.02),
             OrDivider(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SocialIcon(
+                  iconSVG: "assets/icons/facebook.svg",
+                  press: () {},
+                ),
+                SocialIcon(
+                  iconSVG: "assets/icons/twitter.svg",
+                  press: () {},
+                ),
+                SocialIcon(
+                  iconSVG: "assets/icons/google-plus.svg",
+                  press: () {},
+                )
+              ],
+            )
           ],
         ));
   }
